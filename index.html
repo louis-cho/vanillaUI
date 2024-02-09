@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" type="text/css" href="/jquery-ui-1.13.2.custom/jquery-ui.css">
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script src="./jquery-ui-1.13.2.custom/external/jquery/jquery.js"></script>
+<script src="./jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+<script type="module">
+    import * as UI from "./vanillaApp.js";
+
+    let appDiv = document.getElementById("app");
+    let app = new UI.VanillaApp(appDiv, "UI");
+</script>
+</html>
