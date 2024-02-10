@@ -1,45 +1,49 @@
 import { VanillaDialog } from "./vanillaDialog.js";
+import { VanillaTab } from "./vanillaTab.js";
 
 export class VanillaApp {
-    constructor(div, name) {
-        
-        this._div = div;
+  constructor(div, name) {
+    this._div = div;
 
-        this._name = name;
+    this._name = name;
 
-        this.init();
-        
-        this._div_dialog = document.getElementById(this._name + "_div_dialog");
+    this.init();
 
-        this._dialog = new VanillaDialog(this._div_dialog, this._name);
-    }
+    this._div_dialog = document.getElementById(this._name + "_div_dialog");
 
-    init() {
-        let innerHTML = this._createHTML();
-        this._appendHTML(innerHTML);
-    }
+    this._div_tab = document.getElementById(this._name + "_div_tab");
 
-    _appendHTML(innerHTML) {
-        this._div.innerHTML = innerHTML;
-    }
+    this._dialog = new VanillaDialog(this._div_dialog, this._name);
 
-    _createHTML() {
-        let name = this._name;
-        let ihtml = [];
-        let idx = 0;
+    this._tab = new VanillaTab(this._div_tab, this._name);
+  }
 
-        ihtml[idx++] = "<div id='" + name + "_div_menu_bar'>";
-        ihtml[idx++] = "</div>";
+  init() {
+    let innerHTML = this._createHTML();
+    this._appendHTML(innerHTML);
+  }
 
-        ihtml[idx++] = "<div id='" + name + "_div_nav_bar'>";
-        ihtml[idx++] = "</div>";
+  _appendHTML(innerHTML) {
+    this._div.innerHTML = innerHTML;
+  }
 
-        ihtml[idx++] = "<div id='" + name + "_div_tab'>";
-        ihtml[idx++] = "</div>";
+  _createHTML() {
+    let name = this._name;
+    let ihtml = [];
+    let idx = 0;
 
-        ihtml[idx++] = "<div id='" + name + "_div_dialog'>";
-        ihtml[idx++] = "</div>";
+    ihtml[idx++] = "<div id='" + name + "_div_menu_bar'>";
+    ihtml[idx++] = "</div>";
 
-        return ihtml.join("");
-    }
+    ihtml[idx++] = "<div id='" + name + "_div_nav_bar'>";
+    ihtml[idx++] = "</div>";
+
+    ihtml[idx++] = "<div id='" + name + "_div_tab'>";
+    ihtml[idx++] = "</div>";
+
+    ihtml[idx++] = "<div id='" + name + "_div_dialog'>";
+    ihtml[idx++] = "</div>";
+
+    return ihtml.join("");
+  }
 }

@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,yarn,eclipse,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,yarn,eclipse,intellij+all
 
+### Three ###
+three.js-r161/*
+
 ### Eclipse ###
 .metadata
 bin/
