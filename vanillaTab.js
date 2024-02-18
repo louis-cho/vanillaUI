@@ -1,5 +1,4 @@
-import { Canvas } from "./canvas.js";
-import { VanillaTab1 } from "./vanillaTab1.js";
+import { MemoryGame } from "./games/memoryGame.js";
 import { VanillaTab2 } from "./vanillaTab2.js";
 import { VanillaTab3 } from "./vanillaTab3.js";
 
@@ -22,7 +21,8 @@ export class VanillaTab {
     this._div_tab_2 = document.getElementById("tabs-2");
     this._div_tab_3 = document.getElementById("tabs-3");
 
-    this._tab_1 = new Canvas(this._div_tab_1, this._name);
+    // this._tab_1 = new Canvas(this._div_tab_1, this._name);
+    this._tab_1 = new MemoryGame(this._div_tab_1);
     this._tab_2 = new VanillaTab2(this._div_tab_2, this._name);
     this._tab_3 = new VanillaTab3(this._div_tab_3, this._name);
 
