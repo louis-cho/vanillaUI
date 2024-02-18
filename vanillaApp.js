@@ -18,7 +18,7 @@ export class VanillaApp {
 
     this._dialog = new VanillaDialog(this._div_dialog, this._name);
 
-    // this._tab = new VanillaTab(this._div_tab, this._name);
+    this._tab = new VanillaTab(this._div_tab, this._name);
 
     this._sidebar = new VanillaSideBar(this._div_sidebar, this._name);
   }
@@ -43,7 +43,7 @@ export class VanillaApp {
     ihtml[idx++] = "<div id='" + name + "_div_nav_bar'>";
     ihtml[idx++] = "</div>";
 
-    ihtml[idx++] = "<div id='" + name + "_div_side_bar'>";
+    ihtml[idx++] = "<div id='" + name + "_div_side_bar' class='menu'>";
     ihtml[idx++] = "</div>";
 
     ihtml[idx++] = "<div id='" + name + "_div_tab'>";
