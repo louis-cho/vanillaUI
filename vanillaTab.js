@@ -1,5 +1,5 @@
 import { MemoryGame } from "./games/memoryGame.js";
-import { VanillaTab2 } from "./vanillaTab2.js";
+import { WebixChart } from "./webixChart.js";
 import { VanillaTab3 } from "./vanillaTab3.js";
 
 export class VanillaTab {
@@ -23,7 +23,9 @@ export class VanillaTab {
 
     // this._tab_1 = new Canvas(this._div_tab_1, this._name);
     this._tab_1 = new MemoryGame(this._div_tab_1);
-    this._tab_2 = new VanillaTab2(this._div_tab_2, this._name);
+
+    this._tab_2 = new WebixChart(this._div_tab_2, this._name);
+
     this._tab_3 = new VanillaTab3(this._div_tab_3, this._name);
 
     $(this._div).tabs();

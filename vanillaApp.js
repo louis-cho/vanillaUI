@@ -20,7 +20,7 @@ export class VanillaApp {
 
     this._tab = new VanillaTab(this._div_tab, this._name);
 
-    this._sidebar = new VanillaSideBar(this._div_sidebar, this._name);
+    // this._sidebar = new VanillaSideBar(this._div_sidebar, this._name);
   }
 
   init() {
